@@ -10,4 +10,5 @@ for contato in contatos:
 
     mensagem = f"Olá, {nome} tudo bem com você?"
 
+    print(f"\nEnviando mensagem para {nome}...")
     enviar_mensagem(telefone, mensagem)
