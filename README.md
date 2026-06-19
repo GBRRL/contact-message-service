@@ -4,28 +4,13 @@ Projeto desenvolvido em Python com o objetivo de automatizar o envio de mensagen
 
 A aplicação utiliza o Supabase para armazenar os contatos e a Z-API para realizar o envio das mensagens, permitindo centralizar e automatizar o processo de comunicação.
 
-## Tecnologias utilizadas
+## Setup da tabela
 
-* Python
-* Supabase
-* Z-API
-* Requests
+Crie uma tabela chamada contatos com os seguintes campos:
 
-## Estrutura do projeto
-
-contact-message-service/
-│
-├── services/
-│   ├── supabase_service.py
-│   └── zapi_service.py
-│
-├── .env
-├── .env.example
-├── .gitignore
-├── config.py
-├── main.py
-├── README.md
-└── requirements.txt
+- id
+- nome
+- telefone
 
 ## Instalação
 
@@ -54,6 +39,15 @@ ZAPI_CLIENT_TOKEN=
 
 Execute a aplicação com:
 python main.py
+
+## Tecnologias utilizadas
+
+* Python
+* Supabase
+* Z-API
+* Requests
+
+
 
 
 
