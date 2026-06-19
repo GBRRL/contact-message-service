@@ -20,4 +20,5 @@ def main():
         processar_contato(contato)
 
 
-main()
+if __name__ == "__main__":
+    main()
