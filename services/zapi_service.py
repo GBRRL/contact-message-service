@@ -1,6 +1,6 @@
 import requests
 
-from config import ZAPI_INSTANCE_ID, ZAPI_TOKEN
+from config import ZAPI_INSTANCE_ID, ZAPI_TOKEN, ZAPI_CLIENT_TOKEN
 
 def enviar_mensagem(telefone, mensagem):
     url = (
@@ -15,7 +15,18 @@ def enviar_mensagem(telefone, mensagem):
         "message": mensagem
     
     }
-    response = requests.post(url, json=dados)
+    
+    headers = {
+    "Client-Token": ZAPI_CLIENT_TOKEN,
+    "Content-Type": "application/json"
+
+    }
+    
+    response = requests.post(
+    url,
+    json=dados,
+    headers=headers
+    )
     
     if response.status_code == 200:
         print(f"Mensagem enviada com sucesso para {telefone}")
