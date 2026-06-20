@@ -2,50 +2,71 @@
 
 Projeto desenvolvido em Python com o objetivo de automatizar o envio de mensagens via WhatsApp.
 
-A aplicação utiliza o Supabase para armazenar os contatos e a Z-API para realizar o envio das mensagens, permitindo centralizar e automatizar o processo de comunicação.
+A aplicação utiliza o Supabase para armazenar os contatos e a Z-API para realizar o envio das mensagens, automatizando o processo de comunicação.
 
-## Setup da tabela
 
-Crie uma tabela chamada contatos com os seguintes campos:
+## Configuração da tabela no Supabase
 
-- id
-- nome
-- telefone
+No Supabase, crie uma tabela chamada `contatos` com a seguinte estrutura:
+
+| Campo    | Tipo   |
+| -------- | ------ |
+| id       | bigint |
+| nome     | text   |
+| telefone | text   |
+
+O campo `id` pode ser configurado como chave primária e gerado automaticamente.
 
 ## Instalação
 
-Clone o repositório:
-git clone <url-do-repositorio>
+**Clone o repositório:**
 
-Acesse a pasta do projeto:
+```bash
+git clone https://github.com/GBRRL/contact-message-service.git
+```
+
+**Acesse a pasta do projeto:**
+
+```bash
 cd contact-message-service
+```
 
-Instale as dependências:
+**Instale as dependências:**
+
+```bash
 pip install -r requirements.txt
+```
 
 ## Configuração do ambiente
 
-Crie um arquivo .env com as seguintes variáveis:
+Crie um arquivo `.env` com as seguintes variáveis:
 
+```env
 SUPABASE_URL=
 SUPABASE_KEY=
 
 ZAPI_INSTANCE_ID=
 ZAPI_TOKEN=
 ZAPI_CLIENT_TOKEN=
+```
 
+Os valores das variáveis podem ser obtidos nas configurações do projeto no Supabase e nas configurações da instância criada na Z-API.
 
 ## Execução
 
-Execute a aplicação com:
+**Execute a aplicação com:**
+
+```bash
 python main.py
+```
 
 ## Tecnologias utilizadas
 
-* Python
-* Supabase
-* Z-API
-* Requests
+- Python
+- Supabase
+- Z-API
+- Requests
+
 
 
 
